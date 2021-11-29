@@ -7,6 +7,12 @@ from tqdm import tqdm
 class KiteScraper( object ):
     def __init__( self, kite ):
         self.kite = kite
+        self.instruments = self.GetInstruments()
+
+    def GetInstrumentTokenforSymbol(self, symbol="RELIANCE", exchange="NSE"):
+        instruments = self.instruments
+        query = instruments[instruments[instruments["exchange"]==exchange]["tradingsymbol"]==symbol]
+        return query
 
     def GetInstruments(self):
         return self.kite.instruments()
