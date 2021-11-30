@@ -1,5 +1,5 @@
 #  Scraper and Login Automator for Zerodha Kite
-
+![Build](https://github.com/vrishank97/kitescraper/actions/workflows/python-package-conda.yml/badge.svg)
 ## Installing the library
 
 You can install the release via pip
